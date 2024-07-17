@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión / Registrarse</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="script.js">
+</head>
+<body>
+<div class="container">
+    <div id="login-form">
+        <h2>Iniciar sesión</h2>
+        <form id="login" onsubmit="return login()">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="#" onclick="showRegisterForm()">Regístrate aquí</a></p>
+    </div>
+    <div id="register-form" style="display: none;">
+        <h2>Registrarse</h2>
+        <form id="register" onsubmit="return register()">
+            <input type="text" id="newUsername" placeholder="Nombre de usuario" required>
+            <input type="password" id="newPassword" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="#" onclick="showLoginForm()">Inicia sesión aquí</a></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
